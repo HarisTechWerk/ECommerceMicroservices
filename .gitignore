@@ -1,0 +1,14 @@
+# Ignore appsettings files
+appsettings.json
+appsettings.*.json
+
+# Ignore user secrets
+*.secrets.json
+
+# Ignore build artifacts
+bin/
+obj/
+
+# Ignore Visual Studio files
+.vscode/
+.vs/
