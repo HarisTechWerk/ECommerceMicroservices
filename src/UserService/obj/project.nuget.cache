@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zDCoP/3j04o=",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\ECommerceMicroservices\\src\\UserService\\UserService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Haris\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "C:\\Users\\Haris\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
