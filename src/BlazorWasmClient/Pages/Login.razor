@@ -1,0 +1,56 @@
+﻿@page "/login"
+@inject IHttpClientFactory ClientFactory
+@inject NavigationManager Navigation
+@inject BlazorWasmClient.Auth.CustomAuthStateProvider AuthStateProvider
+
+<h3>Login</h3>
+
+<div class="mb-3">
+    <label>Email</label>
+    <input @bind="loginModel.Email" class="form-control" />
+</div>
+<div class="mb-3">
+    <label>Password</label>
+    <input type="password" @bind="loginModel.Password" class="form-control" />
+</div>
+<button @onclick="LoginUser" class="btn btn-primary">Login</button>
+
+@code {
+    private LoginModel loginModel = new LoginModel();
+
+    private async Task LoginUser()
+    {
+        var client = ClientFactory.CreateClient("UserServiceClient");
+        var response = await client.PostAsJsonAsync("api/auth/login", loginModel);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
+            if (result is not null)
+            {
+                // Store token via AuthStateProvider
+                await AuthStateProvider.LoginAsync(result.Token);
+
+                // Navigate to homepage or product listing
+                Navigation.NavigateTo("/");
+            }
+        }
+        else
+        {
+            // Handle error
+            var error = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(error);
+        }
+    }
+
+    private class LoginResponse
+    {
+        public string Token { get; set; } = "";
+    }
+
+    public class LoginModel
+    {
+        public string Email { get; set; } = "";
+        public string Password { get; set; } = "";
+    }
+}

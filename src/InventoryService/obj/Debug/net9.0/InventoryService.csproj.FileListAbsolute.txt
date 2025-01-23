@@ -31,3 +31,5 @@ C:\Projects\ECommerceMicroservices\src\InventoryService\obj\Debug\net9.0\refint\
 C:\Projects\ECommerceMicroservices\src\InventoryService\obj\Debug\net9.0\InventoryService.pdb
 C:\Projects\ECommerceMicroservices\src\InventoryService\obj\Debug\net9.0\InventoryService.genruntimeconfig.cache
 C:\Projects\ECommerceMicroservices\src\InventoryService\obj\Debug\net9.0\ref\InventoryService.dll
+C:\Projects\ECommerceMicroservices\src\InventoryService\obj\Debug\net9.0\InventoryService.sourcelink.json
+C:\Projects\ECommerceMicroservices\src\InventoryService\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

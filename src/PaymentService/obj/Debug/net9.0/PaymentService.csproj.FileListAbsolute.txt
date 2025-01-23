@@ -31,3 +31,5 @@ C:\Projects\ECommerceMicroservices\src\PaymentService\obj\Debug\net9.0\refint\Pa
 C:\Projects\ECommerceMicroservices\src\PaymentService\obj\Debug\net9.0\PaymentService.pdb
 C:\Projects\ECommerceMicroservices\src\PaymentService\obj\Debug\net9.0\PaymentService.genruntimeconfig.cache
 C:\Projects\ECommerceMicroservices\src\PaymentService\obj\Debug\net9.0\ref\PaymentService.dll
+C:\Projects\ECommerceMicroservices\src\PaymentService\obj\Debug\net9.0\PaymentService.sourcelink.json
+C:\Projects\ECommerceMicroservices\src\PaymentService\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

@@ -1,0 +1,47 @@
+﻿@page "/products"
+@inject IHttpClientFactory ClientFactory
+
+<h3>Products</h3>
+
+@if (products is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Price</th><th>Stock</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var p in products)
+            {
+                <tr>
+                    <td>@p.Name</td>
+                    <td>@p.Description</td>
+                    <td>@p.Price</td>
+                    <td>@p.StockQuantity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<ProductDto>? products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var client = ClientFactory.CreateClient("ProductServiceClient");
+        products = await client.GetFromJsonAsync<List<ProductDto>>("api/products");
+    }
+
+    public class ProductDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = "";
+        public string Description { get; set; } = "";
+        public decimal Price { get; set; }
+        public int StockQuantity { get; set; }
+    }
+}

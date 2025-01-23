@@ -31,3 +31,5 @@ C:\Projects\ECommerceMicroservices\src\OrderService\obj\Debug\net9.0\refint\Orde
 C:\Projects\ECommerceMicroservices\src\OrderService\obj\Debug\net9.0\OrderService.pdb
 C:\Projects\ECommerceMicroservices\src\OrderService\obj\Debug\net9.0\OrderService.genruntimeconfig.cache
 C:\Projects\ECommerceMicroservices\src\OrderService\obj\Debug\net9.0\ref\OrderService.dll
+C:\Projects\ECommerceMicroservices\src\OrderService\obj\Debug\net9.0\OrderService.sourcelink.json
+C:\Projects\ECommerceMicroservices\src\OrderService\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
